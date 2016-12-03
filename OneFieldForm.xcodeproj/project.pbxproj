@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		093560B01DF2821C002FC8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093560AF1DF2821C002FC8FF /* AppDelegate.swift */; };
+		093560B21DF2821C002FC8FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093560B11DF2821C002FC8FF /* ViewController.swift */; };
+		093560B51DF2821D002FC8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 093560B31DF2821D002FC8FF /* Main.storyboard */; };
+		093560B71DF2821D002FC8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093560B61DF2821D002FC8FF /* Assets.xcassets */; };
+		093560BA1DF2821D002FC8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 093560B81DF2821D002FC8FF /* LaunchScreen.storyboard */; };
+		093560C51DF2821D002FC8FF /* OneFieldFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093560C41DF2821D002FC8FF /* OneFieldFormTests.swift */; };
+		093560D01DF2821D002FC8FF /* OneFieldFormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093560CF1DF2821D002FC8FF /* OneFieldFormUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		093560C11DF2821D002FC8FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 093560A41DF2821C002FC8FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 093560AB1DF2821C002FC8FF;
+			remoteInfo = OneFieldForm;
+		};
+		093560CC1DF2821D002FC8FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 093560A41DF2821C002FC8FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 093560AB1DF2821C002FC8FF;
+			remoteInfo = OneFieldForm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		093560AC1DF2821C002FC8FF /* OneFieldForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneFieldForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		093560AF1DF2821C002FC8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		093560B11DF2821C002FC8FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		093560B41DF2821D002FC8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		093560B61DF2821D002FC8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		093560B91DF2821D002FC8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		093560BB1DF2821D002FC8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		093560C01DF2821D002FC8FF /* OneFieldFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneFieldFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		093560C41DF2821D002FC8FF /* OneFieldFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFieldFormTests.swift; sourceTree = "<group>"; };
+		093560C61DF2821D002FC8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		093560CB1DF2821D002FC8FF /* OneFieldFormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneFieldFormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		093560CF1DF2821D002FC8FF /* OneFieldFormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFieldFormUITests.swift; sourceTree = "<group>"; };
+		093560D11DF2821D002FC8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		093560A91DF2821C002FC8FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093560BD1DF2821D002FC8FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093560C81DF2821D002FC8FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		093560A31DF2821C002FC8FF = {
+			isa = PBXGroup;
+			children = (
+				093560AE1DF2821C002FC8FF /* OneFieldForm */,
+				093560C31DF2821D002FC8FF /* OneFieldFormTests */,
+				093560CE1DF2821D002FC8FF /* OneFieldFormUITests */,
+				093560AD1DF2821C002FC8FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		093560AD1DF2821C002FC8FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				093560AC1DF2821C002FC8FF /* OneFieldForm.app */,
+				093560C01DF2821D002FC8FF /* OneFieldFormTests.xctest */,
+				093560CB1DF2821D002FC8FF /* OneFieldFormUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		093560AE1DF2821C002FC8FF /* OneFieldForm */ = {
+			isa = PBXGroup;
+			children = (
+				093560AF1DF2821C002FC8FF /* AppDelegate.swift */,
+				093560B11DF2821C002FC8FF /* ViewController.swift */,
+				093560B31DF2821D002FC8FF /* Main.storyboard */,
+				093560B61DF2821D002FC8FF /* Assets.xcassets */,
+				093560B81DF2821D002FC8FF /* LaunchScreen.storyboard */,
+				093560BB1DF2821D002FC8FF /* Info.plist */,
+			);
+			path = OneFieldForm;
+			sourceTree = "<group>";
+		};
+		093560C31DF2821D002FC8FF /* OneFieldFormTests */ = {
+			isa = PBXGroup;
+			children = (
+				093560C41DF2821D002FC8FF /* OneFieldFormTests.swift */,
+				093560C61DF2821D002FC8FF /* Info.plist */,
+			);
+			path = OneFieldFormTests;
+			sourceTree = "<group>";
+		};
+		093560CE1DF2821D002FC8FF /* OneFieldFormUITests */ = {
+			isa = PBXGroup;
+			children = (
+				093560CF1DF2821D002FC8FF /* OneFieldFormUITests.swift */,
+				093560D11DF2821D002FC8FF /* Info.plist */,
+			);
+			path = OneFieldFormUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		093560AB1DF2821C002FC8FF /* OneFieldForm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 093560D41DF2821D002FC8FF /* Build configuration list for PBXNativeTarget "OneFieldForm" */;
+			buildPhases = (
+				093560A81DF2821C002FC8FF /* Sources */,
+				093560A91DF2821C002FC8FF /* Frameworks */,
+				093560AA1DF2821C002FC8FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneFieldForm;
+			productName = OneFieldForm;
+			productReference = 093560AC1DF2821C002FC8FF /* OneFieldForm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		093560BF1DF2821D002FC8FF /* OneFieldFormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 093560D71DF2821D002FC8FF /* Build configuration list for PBXNativeTarget "OneFieldFormTests" */;
+			buildPhases = (
+				093560BC1DF2821D002FC8FF /* Sources */,
+				093560BD1DF2821D002FC8FF /* Frameworks */,
+				093560BE1DF2821D002FC8FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				093560C21DF2821D002FC8FF /* PBXTargetDependency */,
+			);
+			name = OneFieldFormTests;
+			productName = OneFieldFormTests;
+			productReference = 093560C01DF2821D002FC8FF /* OneFieldFormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		093560CA1DF2821D002FC8FF /* OneFieldFormUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 093560DA1DF2821D002FC8FF /* Build configuration list for PBXNativeTarget "OneFieldFormUITests" */;
+			buildPhases = (
+				093560C71DF2821D002FC8FF /* Sources */,
+				093560C81DF2821D002FC8FF /* Frameworks */,
+				093560C91DF2821D002FC8FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				093560CD1DF2821D002FC8FF /* PBXTargetDependency */,
+			);
+			name = OneFieldFormUITests;
+			productName = OneFieldFormUITests;
+			productReference = 093560CB1DF2821D002FC8FF /* OneFieldFormUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		093560A41DF2821C002FC8FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Qinyuan-Li";
+				TargetAttributes = {
+					093560AB1DF2821C002FC8FF = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 925J98MCXZ;
+						ProvisioningStyle = Automatic;
+					};
+					093560BF1DF2821D002FC8FF = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 925J98MCXZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 093560AB1DF2821C002FC8FF;
+					};
+					093560CA1DF2821D002FC8FF = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 925J98MCXZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 093560AB1DF2821C002FC8FF;
+					};
+				};
+			};
+			buildConfigurationList = 093560A71DF2821C002FC8FF /* Build configuration list for PBXProject "OneFieldForm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 093560A31DF2821C002FC8FF;
+			productRefGroup = 093560AD1DF2821C002FC8FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				093560AB1DF2821C002FC8FF /* OneFieldForm */,
+				093560BF1DF2821D002FC8FF /* OneFieldFormTests */,
+				093560CA1DF2821D002FC8FF /* OneFieldFormUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		093560AA1DF2821C002FC8FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093560BA1DF2821D002FC8FF /* LaunchScreen.storyboard in Resources */,
+				093560B71DF2821D002FC8FF /* Assets.xcassets in Resources */,
+				093560B51DF2821D002FC8FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093560BE1DF2821D002FC8FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093560C91DF2821D002FC8FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		093560A81DF2821C002FC8FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093560B21DF2821C002FC8FF /* ViewController.swift in Sources */,
+				093560B01DF2821C002FC8FF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093560BC1DF2821D002FC8FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093560C51DF2821D002FC8FF /* OneFieldFormTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093560C71DF2821D002FC8FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093560D01DF2821D002FC8FF /* OneFieldFormUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		093560C21DF2821D002FC8FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 093560AB1DF2821C002FC8FF /* OneFieldForm */;
+			targetProxy = 093560C11DF2821D002FC8FF /* PBXContainerItemProxy */;
+		};
+		093560CD1DF2821D002FC8FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 093560AB1DF2821C002FC8FF /* OneFieldForm */;
+			targetProxy = 093560CC1DF2821D002FC8FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		093560B31DF2821D002FC8FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				093560B41DF2821D002FC8FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		093560B81DF2821D002FC8FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				093560B91DF2821D002FC8FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		093560D21DF2821D002FC8FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		093560D31DF2821D002FC8FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		093560D51DF2821D002FC8FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 925J98MCXZ;
+				INFOPLIST_FILE = OneFieldForm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Qinyuan-Li.OneFieldForm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		093560D61DF2821D002FC8FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 925J98MCXZ;
+				INFOPLIST_FILE = OneFieldForm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Qinyuan-Li.OneFieldForm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		093560D81DF2821D002FC8FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 925J98MCXZ;
+				INFOPLIST_FILE = OneFieldFormTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Qinyuan-Li.OneFieldFormTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneFieldForm.app/OneFieldForm";
+			};
+			name = Debug;
+		};
+		093560D91DF2821D002FC8FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 925J98MCXZ;
+				INFOPLIST_FILE = OneFieldFormTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Qinyuan-Li.OneFieldFormTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneFieldForm.app/OneFieldForm";
+			};
+			name = Release;
+		};
+		093560DB1DF2821D002FC8FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 925J98MCXZ;
+				INFOPLIST_FILE = OneFieldFormUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Qinyuan-Li.OneFieldFormUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = OneFieldForm;
+			};
+			name = Debug;
+		};
+		093560DC1DF2821D002FC8FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 925J98MCXZ;
+				INFOPLIST_FILE = OneFieldFormUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Qinyuan-Li.OneFieldFormUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = OneFieldForm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		093560A71DF2821C002FC8FF /* Build configuration list for PBXProject "OneFieldForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				093560D21DF2821D002FC8FF /* Debug */,
+				093560D31DF2821D002FC8FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		093560D41DF2821D002FC8FF /* Build configuration list for PBXNativeTarget "OneFieldForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				093560D51DF2821D002FC8FF /* Debug */,
+				093560D61DF2821D002FC8FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		093560D71DF2821D002FC8FF /* Build configuration list for PBXNativeTarget "OneFieldFormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				093560D81DF2821D002FC8FF /* Debug */,
+				093560D91DF2821D002FC8FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		093560DA1DF2821D002FC8FF /* Build configuration list for PBXNativeTarget "OneFieldFormUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				093560DB1DF2821D002FC8FF /* Debug */,
+				093560DC1DF2821D002FC8FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 093560A41DF2821C002FC8FF /* Project object */;
+}
