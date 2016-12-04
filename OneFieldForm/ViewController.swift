@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UITextViewDelegate {
   
+  @IBOutlet weak var textfield: UITextField!
+  @IBAction func didChanged(_ sender: UITextField) {
+//    UIView.animate(withDuration: 0.01, animations: {
+      self.textfield.sizeToFit()
+      self.textview.text = self.textfield.text
+//      let temp = (self.width - self.textview.frame.width)/2
+//      self.leading.constant = temp
+//      self.trailing.constant = temp
+      self.view.layoutIfNeeded()
+  }
   var step: Step = .One
   
   enum Step {
@@ -58,7 +68,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         self.avaLeading.constant = 0
         self.ava.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/4)
         self.ava.transform = CGAffineTransform.identity
-        
         self.view.layoutIfNeeded()
       }, completion: { Void in })
     })
@@ -82,10 +91,8 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     switch step {
     case .One:
-      textview.isSecureTextEntry = true
       animate(view: ava, withLabel: "Password", withLeading: avaLeading, step: step)
     case .Two:
-      textview.isSecureTextEntry = false
       animate(view: pass, withLabel: "Email", withLeading: passLeading, step: step)
     case .Three:
       animate(view: email, withLabel: "", withLeading: emailLeading, step: step)
@@ -122,6 +129,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     ava.layer.cornerRadius = bg.bounds.size.height/2
     ava.clipsToBounds = true
     textview.delegate = self
+  
     ava.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
     email.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
     pass.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
@@ -129,6 +137,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     
     label.alpha = 0
+    textfield.alpha = 0
     textview.alpha = 0
     UIView.animate(withDuration: 1.2, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: [], animations: {
       //      self.textview.text = ""
@@ -154,10 +163,19 @@ class ViewController: UIViewController, UITextViewDelegate {
     })
     
     UIView.animate(withDuration: 0.5, delay: 0.5, options: [], animations: {
-      self.textview.alpha = 1
+      if step == .One {
+        self.textfield.alpha = 1
+        self.textview.alpha = 0
+      }else if step == .Two{
+        self.textview.alpha = 1
+        self.textfield.alpha = 0
+      }else{
+        self.textview.alpha = 1
+      }
       self.label.alpha = 1
       self.label.text = withLabel
       self.textview.text = ""
+      self.textfield.text = ""
     }, completion: nil)
     
     UIView.animate(withDuration: 1.2, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [.curveEaseIn], animations: {

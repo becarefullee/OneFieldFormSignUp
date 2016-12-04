@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ztp-vN-wF9">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,17 +13,17 @@
         <!--View Controller-->
         <scene sceneID="jAT-bB-xKA">
             <objects>
-                <viewController id="ztp-vN-wF9" customClass="ViewController" customModule="_23" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ztp-vN-wF9" customClass="ViewController" customModule="OneFieldForm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p1N-va-fMr"/>
                         <viewControllerLayoutGuide type="bottom" id="ezA-jj-3fm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zwX-sQ-YgD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtf-dX-12j">
-                                <rect key="frame" x="94" y="303" width="187" height="62"/>
+                                <rect key="frame" x="67" y="253" width="187" height="62"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZfF-5C-IWk">
                                         <rect key="frame" x="67" y="22" width="60" height="30"/>
@@ -35,10 +35,10 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvR-NE-rYi">
-                                        <rect key="frame" x="71" y="11" width="55" height="17"/>
+                                        <rect key="frame" x="71" y="10" width="55" height="17"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlb-ff-Ld5">
-                                        <rect key="frame" x="63" y="13" width="61" height="36"/>
+                                        <rect key="frame" x="62.5" y="13" width="61" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,10 +107,23 @@
                                     <constraint firstItem="W5R-at-USo" firstAttribute="centerY" secondItem="xtf-dX-12j" secondAttribute="centerY" id="z39-vz-Hjf"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOi-tE-wpT">
+                                <rect key="frame" x="137" y="278" width="67" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="didChanged:" destination="ztp-vN-wF9" eventType="editingChanged" id="gth-I9-jFP"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="yOi-tE-wpT" firstAttribute="top" secondItem="ZfF-5C-IWk" secondAttribute="top" constant="3" id="5aQ-XQ-xJE"/>
                             <constraint firstItem="xtf-dX-12j" firstAttribute="centerY" secondItem="zwX-sQ-YgD" secondAttribute="centerY" id="HWU-VC-p83"/>
+                            <constraint firstItem="yOi-tE-wpT" firstAttribute="bottom" secondItem="ZfF-5C-IWk" secondAttribute="bottom" constant="3" id="m6t-yx-wSO"/>
+                            <constraint firstItem="yOi-tE-wpT" firstAttribute="trailing" secondItem="ZfF-5C-IWk" secondAttribute="trailing" constant="10" id="mfY-fa-HbG"/>
+                            <constraint firstItem="yOi-tE-wpT" firstAttribute="leading" secondItem="ZfF-5C-IWk" secondAttribute="leading" constant="3" id="qWQ-6n-2rX"/>
                             <constraint firstItem="xtf-dX-12j" firstAttribute="centerX" secondItem="zwX-sQ-YgD" secondAttribute="centerX" id="sAy-27-CW9"/>
                         </constraints>
                     </view>
@@ -127,12 +140,13 @@
                         <outlet property="pass" destination="g9n-Q3-4tZ" id="30E-I6-0rD"/>
                         <outlet property="passLeading" destination="FK9-6Y-Y2t" id="5sB-QF-b02"/>
                         <outlet property="signup" destination="tlb-ff-Ld5" id="hgg-F5-pZC"/>
+                        <outlet property="textfield" destination="yOi-tE-wpT" id="SYh-yf-LSB"/>
                         <outlet property="textview" destination="ZfF-5C-IWk" id="0p3-To-85T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oha-Qv-xEY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013.6" y="-7.6461769115442282"/>
+            <point key="canvasLocation" x="1012.5" y="-8.4507042253521121"/>
         </scene>
     </scenes>
     <resources>
