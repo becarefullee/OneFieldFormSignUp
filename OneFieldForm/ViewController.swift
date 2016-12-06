@@ -9,39 +9,61 @@
 import UIKit
 
 class ViewController: UIViewController, UITextViewDelegate {
-  
-  @IBOutlet weak var textfield: UITextField!
-  @IBAction func didChanged(_ sender: UITextField) {
-//    UIView.animate(withDuration: 0.01, animations: {
+    @IBAction func didChanged(_ sender: UITextField) {
       self.textfield.sizeToFit()
       self.textview.text = self.textfield.text
-//      let temp = (self.width - self.textview.frame.width)/2
-//      self.leading.constant = temp
-//      self.trailing.constant = temp
       self.view.layoutIfNeeded()
   }
   var step: Step = .One
+  var mode: Mode = .None
+  
+  enum Mode {
+    case None
+    case SignIn
+    case SignUp
+  }
+  
   
   enum Step {
+    case Zero
     case One
     case Two
     case Three
-    case Four
     mutating func next() {
       switch self {
+      case .Zero:
+        self = .One
       case .One:
         self = .Two
       case .Two:
         self = .Three
       case .Three:
-        self = .Four
-      case .Four:
-        self = .Four
+        print("Done")
+      }
+    }
+    mutating func last() {
+      switch self {
+      case .Zero:
+        print("error")
+      case .One:
+        self = .Zero
+      case .Two:
+        self = .One
+      case .Three:
+        self = .Two
       }
     }
   }
-  @IBAction func signupBtnPressed(_ sender: UIButton) {
+  
+  
+  @IBAction func signinBtnPressed(_ sender: UIButton) {
+    mode = .SignIn
+    signinBg.alpha = 0
+    backBg.alpha = 1
+    bgCenterY.constant = signinBg.center.y - bg.center.y
     
+    self.view.layoutIfNeeded()
+    self.signup.setTitle("Sign In", for: .normal)
     UIView.animate(withDuration: 0.05, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.1, options: [], animations: {
       self.bg.transform = CGAffineTransform(scaleX: 0.8 , y: 0.9)
     }, completion: { Void in
@@ -71,9 +93,62 @@ class ViewController: UIViewController, UITextViewDelegate {
         self.view.layoutIfNeeded()
       }, completion: { Void in })
     })
+        UIView.animate(withDuration: 0.5, animations: {
+      self.back.alpha = 1
+    }, completion: { Void in
+    })
   }
-  
-  @IBOutlet weak var centerx: NSLayoutConstraint!
+
+  @IBAction func signupBtnPressed(_ sender: UIButton) {
+    mode = .SignUp
+    UIView.animate(withDuration: 0.1, animations: {
+      self.signinBg.alpha = 0
+    })
+    UIView.animate(withDuration: 0.5, animations: {
+      self.back.alpha = 1
+      self.backBg.alpha = 1
+      self.bgCenterY.constant = self.signinBg.center.y - self.bg.center.y
+      self.view.layoutIfNeeded()
+    }, completion: { Void in
+      
+    })
+    UIView.animate(withDuration: 0.05, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.1, options: [], animations: {
+      self.bg.transform = CGAffineTransform(scaleX: 0.8 , y: 0.9)
+    }, completion: { Void in
+      UIView.animate(withDuration: 0.1, animations: {
+        self.signup.alpha = 0
+      })
+      UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.1, options: [], animations: {
+        self.bg.transform = CGAffineTransform.identity
+        self.label.alpha = 1
+        self.textview.alpha = 1
+        self.emailLeading.constant = 0
+        self.email.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/4)
+        self.email.transform = CGAffineTransform.identity
+        self.nextTrailing.constant = 0
+        self.view.layoutIfNeeded()
+      }, completion: { Void in })
+      UIView.animate(withDuration: 1.0, delay: 0.1, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: [], animations: {
+        self.passLeading.constant = 0
+        self.pass.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/4)
+        self.pass.transform = CGAffineTransform.identity
+        self.view.layoutIfNeeded()
+      }, completion: { Void in })
+      UIView.animate(withDuration: 1.0, delay: 0.2, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: [], animations: {
+        self.avaLeading.constant = 0
+        self.ava.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/4)
+        self.ava.transform = CGAffineTransform.identity
+        self.view.layoutIfNeeded()
+      }, completion: { Void in })
+    })
+
+  }
+  @IBOutlet weak var bgCenterY: NSLayoutConstraint!
+  @IBOutlet weak var back: UIButton!
+  @IBOutlet weak var signin: UIButton!
+  @IBOutlet weak var signinBg: UIView!
+  @IBOutlet weak var welcome: UILabel!
+  @IBOutlet weak var textfield: UITextField!
   @IBOutlet weak var nextTrailing: NSLayoutConstraint!
   @IBOutlet weak var nextBtn: UIButton!
   @IBOutlet weak var signup: UIButton!
@@ -83,6 +158,13 @@ class ViewController: UIViewController, UITextViewDelegate {
   @IBOutlet weak var textview: UITextView!
   @IBOutlet weak var label: UILabel!
   var textViewWidth: CGFloat?
+  
+  @IBOutlet weak var backBg: UIView!
+  
+  @IBAction func backBtnPressed(_ sender: UIButton) {
+  }
+ 
+  
   @IBAction func next(_ sender: Any) {
     if textview.text == "" {
       shakeAnimation(view: bg)
@@ -90,64 +172,76 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     switch step {
+    case .Zero:
+      print("error")
     case .One:
       animate(view: ava, withLabel: "Password", withLeading: avaLeading, step: step)
     case .Two:
-      animate(view: pass, withLabel: "Email", withLeading: passLeading, step: step)
+      if mode == .SignIn {
+        welcomeAnimation()
+      }else{
+        animate(view: pass, withLabel: "Email", withLeading: passLeading, step: step)
+      }
     case .Three:
-      animate(view: email, withLabel: "", withLeading: emailLeading, step: step)
-    case .Four:
-      print("end")
+      if mode == .SignUp {
+        welcomeAnimation()
+      }
     }
   }
   
   @IBOutlet weak var bg: UIView!
   @IBOutlet weak var ava: UIImageView!
   @IBOutlet weak var pass: UIImageView!
-  
   @IBOutlet weak var email: UIImageView!
+  
+  func makeViewToRoundCorner(view: UIView) {
+    view.layer.borderWidth = 1
+    view.layer.borderColor = UIColor.white.cgColor
+    view.layer.cornerRadius = bg.bounds.size.height/2
+    view.clipsToBounds = true
+  }
+    
+  func welcomeAnimation() {
+    UIView.animate(withDuration: 1.0, animations: {
+      self.ava.alpha = 0
+      self.bg.alpha = 0
+      self.textfield.alpha = 0
+      self.textview.alpha = 0
+      self.email.alpha = 0
+      self.pass.alpha = 0
+      self.nextBtn.alpha = 0
+      self.back.alpha = 0
+      self.backBg.alpha = 0
+      self.welcome.alpha = 1
+      self.welcome.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+    })
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    bg.layer.borderWidth = 1
-    bg.layer.borderColor = UIColor.white.cgColor
-    bg.layer.cornerRadius = bg.bounds.size.height/2
-    bg.clipsToBounds = true
-    
-    pass.layer.borderColor = UIColor.white.cgColor
-    pass.layer.borderWidth = 1
-    pass.layer.cornerRadius = bg.bounds.size.height/2
-    pass.clipsToBounds = true
-    
-    email.layer.borderColor = UIColor.white.cgColor
-    email.layer.borderWidth = 1
-    email.layer.cornerRadius = bg.bounds.size.height/2
-    email.clipsToBounds = true
-    
-    ava.layer.borderColor = UIColor.white.cgColor
-    ava.layer.borderWidth = 1
-    ava.layer.cornerRadius = bg.bounds.size.height/2
-    ava.clipsToBounds = true
+    makeViewToRoundCorner(view: bg)
+    makeViewToRoundCorner(view: pass)
+    makeViewToRoundCorner(view: email)
+    makeViewToRoundCorner(view: ava)
+    makeViewToRoundCorner(view: backBg)
+    makeViewToRoundCorner(view: signinBg)
     textview.delegate = self
   
     ava.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
     email.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
     pass.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
-    
-    
-    
+    welcome.alpha = 0
     label.alpha = 0
     textfield.alpha = 0
     textview.alpha = 0
+    backBg.alpha = 0
+    back.alpha = 0
     UIView.animate(withDuration: 1.2, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: [], animations: {
-      //      self.textview.text = ""
       self.bg.transform = CGAffineTransform(scaleX: 0.7 , y: 1.0)
       self.bg.transform = CGAffineTransform.identity
-      
-    }, completion: { Void in
-    })
-    
-    
+      self.signinBg.transform = CGAffineTransform(scaleX: 0.7 , y: 1.0)
+      self.signinBg.transform = CGAffineTransform.identity
+    }, completion: nil)
   }
   
   func textViewDidChange(_ textView: UITextView) {
@@ -184,10 +278,10 @@ class ViewController: UIViewController, UITextViewDelegate {
       self.view.layoutIfNeeded()
     }, completion: { Void in
       self.step.next()
-      withLeading.constant = -200
+      withLeading.constant = -100
       UIView.animate(withDuration: 0.3, animations: {
-        self.ava.transform = CGAffineTransform(rotationAngle: CGFloat.pi/12)
-        self.ava.transform = CGAffineTransform.identity
+        self.view.transform = CGAffineTransform(rotationAngle: CGFloat.pi/12)
+        self.view.transform = CGAffineTransform.identity
       })
     })
   }
